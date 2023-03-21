@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <link rel="stylesheet" href="style_w6_Grid_2z.css">   
+    <style>
+        .header{
+            background: #a59e9ede;
+            grid-area: header;
+            text-align: center;
+            padding: 30px;
+        }
+        .main{
+            background: hsla(51, 74%, 77%, 0.979);
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            text-align: center;
+            gap: 30px;
+            padding: 30px;
+        }
+        .aside{
+            background: #99ec72de;
+            grid-area: aside;
+            text-align: center;
+            padding: 30px;
+        }
+        .footer{
+            background: #ebe7e7de;
+            grid-area: footer;
+            display: grid;
+            grid-template-columns: repeat(4, 22%);
+            padding: 10px;
+            justify-content: space-between;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;;
+            grid-template-areas:
+            "header header header"
+            "main main aside"  
+            "footer footer footer";
+            grid-template-rows: 10% 1fr 10% ;
+            height: 70vh;
+        }
+        .hhh{
+            grid-column: 1/3;
+        }
+        .cell{
+            text-align: center;
+            background: beige;
+            padding: 30px;
+        }
+        .cell3{
+            grid-column: 1/3;
+        }
+        .ftr{
+            display: grid;
+            background: #e2d9d9de;
+            text-align: center;
+            padding: 10px;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> [Шапка сраницы]</header>
+        <main class="main"> 
+            <div class="hhh"> [Основная часть] </div> 
+            <div class="cell cell1">[Ещё 1]</div>
+            <div class="cell cell2">[Ещё 2]</div>
+            <div class="cell cell3">[Ещё 3]</div>
+        </main>
+        <aside class="aside">[Боковая часть]</aside>
+        <footer class="footer">
+            <div class="ftr"> [Секция футера1]</div>
+            <div class="ftr">[Секция футера1]</div>
+            <div class="ftr">[Секция футера1]</div>
+            <div class="ftr">[Секция футера1]</div>
+        </footer>
+    </div>
+</body>
+</html>
